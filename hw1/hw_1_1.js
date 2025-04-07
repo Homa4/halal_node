@@ -4,7 +4,8 @@ import fs from "fs";
 const readStream = fs.createReadStream("./source.txt", { encoding: "utf-8" });
 const writeStream = fs.createWriteStream("./copy.txt", { encoding: "utf-8" });
 
-readStream.on("data", (chunk) => {
+readStream.on("data", (chunk, error) => {
+  if (error) throw error;
   writeStream.write(chunk);
 });
 

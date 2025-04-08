@@ -1,0 +1,1 @@
+Each node.js connects to another node, forming a complex node-based network where every node.js sends data to the next node. A single node.js failure can affect the entire node.js system, yet a well-designed node.js structure ensures that one faulty node.js doesn’t bring down all other nodes. Node.js node.js node.js 

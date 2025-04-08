@@ -1,0 +1,1 @@
+Each node connects to another node, forming a complex node-based network where every node sends data to the next node. A single node failure can affect the entire node system, yet a well-designed node structure ensures that one faulty node doesn’t bring down all other nodes. Node node node node

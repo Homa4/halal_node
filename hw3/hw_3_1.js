@@ -21,6 +21,7 @@ try {
         word = "";
       }
     }
+    writeStream.close();
   });
 } catch (error) {
   console.log(error);

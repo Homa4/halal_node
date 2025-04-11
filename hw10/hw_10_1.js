@@ -1,3 +1,4 @@
+const fs = require("fs");
 const { Transform } = require("stream");
 
 class PasswordTransform extends Transform {
@@ -25,8 +26,6 @@ class PasswordTransform extends Transform {
     callback();
   }
 }
-
-const fs = require("fs");
 
 const readStream = fs.createReadStream("./text.txt", { encoding: "utf8" });
 const writeStream = fs.createWriteStream("./changedFile.txt", {

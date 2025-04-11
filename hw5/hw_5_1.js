@@ -27,7 +27,9 @@ for (let i = 0; i < arrOfHash.length; i++) {
     .createHash("sha256", secret)
     .update(`${arrOfPass[i]}`)
     .digest("hex");
-  if (newHash === arrOfHash[i]) {
+  const hashBufferPass = Buffer.from(arrOfHash[i], "hex");
+  const checkBufferPass = Buffer.from(newHash, "hex");
+  if (crypto.timingSafeEqual(hashBufferPass, checkBufferPass)) {
     console.log("✅ success");
   } else {
     console.log("❌ failed");

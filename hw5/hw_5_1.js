@@ -1,9 +1,7 @@
 const fs = require("fs");
 const crypto = require("crypto");
 const { createHmac } = require("node:crypto");
-const bcrypt = require("bcrypt");
-
-const secret = "homa";
+// const bcrypt = require("bcrypt");
 
 const pass1 = "12345";
 const pass2 = "54321";
@@ -15,16 +13,13 @@ const arrOfPass = [pass1, pass2, pass3, pass4, pass5];
 const arrOfHash = [];
 
 arrOfPass.forEach((pass) => {
-  const hash = crypto
-    .createHash("sha256", secret)
-    .update(`${pass}`)
-    .digest("hex");
+  const hash = crypto.createHash("sha256").update(`${pass}`).digest("hex");
   arrOfHash.push(hash);
 });
 
 for (let i = 0; i < arrOfHash.length; i++) {
   const newHash = crypto
-    .createHash("sha256", secret)
+    .createHash("sha256")
     .update(`${arrOfPass[i]}`)
     .digest("hex");
   const hashBufferPass = Buffer.from(arrOfHash[i], "hex");

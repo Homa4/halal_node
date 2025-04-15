@@ -46,3 +46,35 @@
   "localPort": 3000
 }
 
+{
+  "time": "2025-04-15T23:25:09.372Z",
+  "method": "GET",
+  "url": "/getTasks",
+  "headers": {
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "*/*",
+    "user-agent": "Thunder Client (https://www.thunderclient.com)",
+    "host": "localhost:3000",
+    "connection": "close"
+  },
+  "ip": "::ffff:127.0.0.1",
+  "port": 62362,
+  "localPort": 3000
+}
+
+{
+  "time": "2025-04-15T23:25:12.731Z",
+  "method": "GET",
+  "url": "/getTasks",
+  "headers": {
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "*/*",
+    "user-agent": "Thunder Client (https://www.thunderclient.com)",
+    "host": "localhost:3000",
+    "connection": "close"
+  },
+  "ip": "::ffff:127.0.0.1",
+  "port": 62376,
+  "localPort": 3000
+}
+

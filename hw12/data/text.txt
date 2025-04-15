@@ -78,3 +78,20 @@
   "localPort": 3000
 }
 
+{
+  "time": "2025-04-15T23:25:55.595Z",
+  "method": "POST",
+  "url": "/postTask",
+  "headers": {
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "*/*",
+    "user-agent": "Thunder Client (https://www.thunderclient.com)",
+    "host": "localhost:3000",
+    "connection": "close",
+    "content-length": "0"
+  },
+  "ip": "::ffff:127.0.0.1",
+  "port": 62570,
+  "localPort": 3000
+}
+

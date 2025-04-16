@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title Продукти в магазині
+    style.
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #fdfdfd;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .available {
+        color: green;
+      }
+      .unavailable {
+        color: red;
+      }
+
+  body
+    h1 Продукти в магазині
+
+    ul
+      each product in products
+        if product.inStock
+          li.available= `${product.name} - ${product.price} грн (в наявності)`
+        else
+          li.unavailable= `${product.name} - ${product.price} грн (немає в наявності)`

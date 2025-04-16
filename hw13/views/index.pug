@@ -1,1 +1,34 @@
-h1 Hello world
+doctype html
+html
+  head
+    title users 
+    style.
+      table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 20px auto;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+
+  body
+    h1(style="text-align: center") User list 
+
+    table
+      thead
+        tr
+          th Name 
+          th Age 
+          th Email
+      tbody
+        each user in users
+          tr
+            td= user.name
+            td= user.age
+            td= user.email

@@ -1,0 +1,9 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    command: ["node", "hw_16_1.js"]

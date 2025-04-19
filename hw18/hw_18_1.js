@@ -1,0 +1,27 @@
+const fs = require("fs");
+const path = require("path");
+
+const pathToFile = path.join("./text.txt");
+
+function byteToBinaryString(s) {
+  return s.toString(2).padStart(8, "0");
+}
+
+function binaryToText(str) {
+  let output = [];
+  str.split(" ").forEach((element) => {
+    output.push(String.fromCharCode(parseInt(element, 2)));
+  });
+  return output.join("");
+}
+
+const content = fs.readFileSync(pathToFile);
+
+const valueInBuffer = Buffer.from(content, "binary");
+
+const covertedBinValue = [...valueInBuffer].map(byteToBinaryString).join(" ");
+
+const a = Buffer.from(covertedBinValue.toString(10));
+const covertedBinValue2 = binaryToText(covertedBinValue);
+
+console.log(covertedBinValue2);

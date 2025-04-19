@@ -10,7 +10,7 @@ function byteToBinaryString(s) {
 
 const content = fs.readFileSync(pathToFile);
 
-const valueInBuffer = Buffer.from(content, "binary");
+const valueInBuffer = Buffer.from(content, "utf8");
 const covertedValue = [...valueInBuffer].map(byteToBinaryString).join(" ");
 fs.writeFileSync(pathToBinaryFile, covertedValue);
 // console.log(valueInBuffer);

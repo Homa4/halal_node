@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  tiny_prod:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    image: node:18
+    ports:
+      - "3000:3000"
+    command: npm start

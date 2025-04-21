@@ -21,7 +21,7 @@ const valueInBuffer = Buffer.from(content, "binary");
 
 const covertedBinValue = [...valueInBuffer].map(byteToBinaryString).join(" ");
 
-const a = Buffer.from(covertedBinValue.toString(10));
+const a = Buffer.from(covertedBinValue);
 const covertedBinValue2 = binaryToText(covertedBinValue);
 
 console.log(covertedBinValue2);

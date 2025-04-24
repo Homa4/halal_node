@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { Colors, Decorations } = require("javascript-console-styling");
 
 const pathToFile = path.join("./text.txt");
 
@@ -16,12 +17,11 @@ function binaryToText(str) {
 }
 
 const content = fs.readFileSync(pathToFile);
-
 const valueInBuffer = Buffer.from(content, "binary");
 
 const covertedBinValue = [...valueInBuffer].map(byteToBinaryString).join(" ");
-
-const a = Buffer.from(covertedBinValue);
 const covertedBinValue2 = binaryToText(covertedBinValue);
 
+console.log(covertedBinValue + "\n`");
+console.log(Colors.yellow("\n Restored text\n"));
 console.log(covertedBinValue2);

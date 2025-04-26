@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  front:
+    build: ./app/front
+    container_name: front-container
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    networks:
+      - app-network
+   
+
+  back:
+    build: ./app/back
+    container_name: back-container
+    command: npm run start
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

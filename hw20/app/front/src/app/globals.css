@@ -1,0 +1,58 @@
+/* From Uiverse.io by nima-mollazadeh */
+.userList {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.userList span {
+    position: relative;
+    z-index: 1;
+}
+
+.userList::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.userList:hover::before {
+    opacity: 0.7;
+}
+
+.userList::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.userList:hover:after {
+    opacity: 1;
+}
+
+/* page.module.css */
+.homeDiv {
+    min-height: 100vh;
+    /* full viewport height */
+    display: flex;
+    /* enable flex centering */
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    background-color: #f0f4f8;
+    /* a light, neutral page background */
+}

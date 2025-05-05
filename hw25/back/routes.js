@@ -57,10 +57,7 @@ router.get("/topItems", async (req, res) => {
 
     console.log("🗄️ obj with list of items and their counts: ", itemsQuantity);
 
-    // 1) find the maximum quantity value
     const maxQty = Math.max(...Object.values(itemsQuantity));
-
-    // 2) find which key has that value
     const maxCategory = Object.keys(itemsQuantity).find(
       (cat) => itemsQuantity[cat] === maxQty
     );

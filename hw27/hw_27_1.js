@@ -13,6 +13,10 @@ app.use("/studentsUpperTwenty", route);
 app.use("/studentsWithAvgAbove85", route);
 app.use("/studentsNameStartwithA", route);
 
+app.use("/studentsAvgMark", route);
+app.use("/groupsScore", route);
+app.use("/globalMark", route);
+
 app.listen(3000, () => {
   console.log("http://localhost:3000");
 });

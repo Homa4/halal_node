@@ -113,4 +113,108 @@ route.get("/studentsNameStartwithA", async (req, res) => {
     console.error("👹 hehehe, something went wrong: ", err);
   }
 });
+
+route.get("/groupsScore", async (req, res) => {
+  // const sum = nums.reduce((acc, curr) => acc + curr, 0);
+  try {
+    const groupA = await GroupA.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+    const groupB = await GroupB.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+
+    const groupAScore = groupA.reduce((acc, cur) => acc + cur.avgMark, 0);
+    const groupBScore = groupB.reduce((acc, cur) => acc + cur.avgMark, 0);
+    const obj = {
+      A: groupAScore,
+      B: groupBScore,
+    };
+    console.log("📑 groups score:", obj);
+    res.status(200).send(obj);
+  } catch (err) {
+    console.error("👹 hehehe, something went wrong: ", err);
+  }
+});
+
+route.get("/studentsAvgMark", async (req, res) => {
+  try {
+    const groupA = await GroupA.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+    const groupB = await GroupB.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+
+    const students = [...groupA, ...groupB];
+    console.log("📑 students avg mark:", students);
+    res.status(200).send(students);
+  } catch (err) {
+    console.error("👹 hehehe, something went wrong: ", err);
+  }
+});
+
+route.get("/globalMark", async (req, res) => {
+  try {
+    const groupA = await GroupA.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+    const groupB = await GroupB.aggregate([
+      {
+        $project: {
+          name: 1,
+          age: 1,
+          group: 1,
+          avgMark: { $avg: "$marks" },
+        },
+      },
+    ]);
+
+    const students = [...groupA, ...groupB];
+    let markSum = 0;
+    students.forEach((student) => {
+      markSum = markSum + student.avgMark;
+    });
+    const totalAvg = markSum / students.length;
+    console.log("📑 groups avg mark:", totalAvg);
+    res.status(200).send(markSum);
+  } catch (err) {
+    console.error("👹 hehehe, something went wrong: ", err);
+  }
+});
 module.exports = route;

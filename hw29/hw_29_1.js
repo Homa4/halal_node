@@ -16,6 +16,7 @@ app.use(cookieParser());
 
 app.use("/", router);
 app.use("/auth/login", router);
+app.use("/auth/register", router);
 app.use("/workers", jwtMiddleware, workerRouter);
 
 app.listen(3000, () => {

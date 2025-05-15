@@ -28,17 +28,15 @@ router.get("/", (req, res) => {
   res.status(200).send("wellcome my friend");
 });
 
-// router.get("/workers", async (req, res) => {
-//   // console.warn("req.user", res.user);
-//   try {
-//     const workers = await Worker.find();
-//     const jsonWorkers = JSON.stringify(workers);
-//     res.status(200).send(jsonWorkers);
-//     console.info(jsonWorkers);
-//   } catch (err) {
-//     console.error("👹 hehehe, something went wrong:\n", err);
-//   }
-// });
+router.post("/auth/register", (req, res) => {
+  try {
+    Worker.create(req.body);
+    res.status(201).send("😘 worker successfully was added");
+  } catch (err) {
+    console.error("👹 hehehe, failed:\n", err);
+    res.status(400).json({ error: err.message });
+  }
+});
 
 router.post("/auth/login", async (req, res) => {
   console.log("login endpoint called; request body:");

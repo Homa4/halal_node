@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* makes it responsive on small screens */
+}
+
+.infoSection {
+    flex: 1;
+    min-width: 300px;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.infoSection span {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.infoSection strong {
+    color: #ff5a00;
+}
+
+.founderImage {
+    flex-shrink: 0;
+    width: 400px;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

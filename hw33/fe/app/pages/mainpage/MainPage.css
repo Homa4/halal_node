@@ -1,0 +1,15 @@
+.mainWrapper {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:780px) {
+    .mainWrapper {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,4 @@
+https://675f42631f7ad2426997fa40.mockapi.io/api/v1/:endpoint
+
+
+https://mockapi.io/clone/682e3ba9746f8ca4a47c563e

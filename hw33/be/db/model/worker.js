@@ -8,6 +8,7 @@ const workershema = new Schema({
   salary: Number,
   email: String,
   password: String,
+  role: String,
 });
 
 const Worker = model("Worker", workershema);

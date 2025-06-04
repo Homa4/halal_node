@@ -1,8 +1,11 @@
 "use client";
 import "./Header.css";
-// import logo from "../../images/logo1.png";
 
-const Header = () => {
+const Header = ({ showLogin = true }) => {
+  const handleLogOut = async () => {
+    await fetch("http://localhost:8080/public/logout");
+  };
+
   return (
     <div className="header-container">
       <div className="header-logo">
@@ -15,17 +18,22 @@ const Header = () => {
         <a href="/">
           <span>Home</span>
         </a>
-        <a href="/about">
+        <a href="/public/aboutUsPage">
           <span>About us</span>
         </a>
         <a href="/contact">
           <span>Contact us</span>
         </a>
       </div>
-
-      <a className="header-login" href="/login">
-        Login
-      </a>
+      {showLogin ? (
+        <a className="header-login" href="/public/login">
+          Log in
+        </a>
+      ) : (
+        <a className="header-login" onClick={handleLogOut} href="/">
+          Log out
+        </a>
+      )}
     </div>
   );
 };

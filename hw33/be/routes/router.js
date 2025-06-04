@@ -29,16 +29,19 @@ route.post("/register", async (req, res) => {
   }
 });
 
-route.get("/login", async (req, res) => {
+route.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const token = sign(email, password);
   console.log(token);
   try {
-    const list = await Worker.findOne(req.body.newWorker);
+    const worker = await Worker.findOne({ email, password });
     console.log(chalk.bgGreen("You logged in"));
-    res.status(200).cookie("token", token).send(list.data);
+    res
+      .status(200)
+      .cookie("token", token, { httpOnly: true, sameSite: "lax" })
+      .send(worker);
   } catch (err) {
-    console.log(chalk.bgRedBright(`error adding worker :\n`), err);
+    console.log(chalk.bgRedBright(`error logging worker :\n`), err);
   }
 });
 

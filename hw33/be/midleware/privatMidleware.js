@@ -3,8 +3,9 @@ const jwt = require("jsonwebtoken");
 const config = require("../token/configToken");
 
 function midleware(req, res, next) {
+  // const token = req.headers.authorization;
   const token = req.cookies.token;
-  console.log(token);
+  // console.log(token);
   console.log("midleware triggered");
   if (!token) {
     return res.status(403).send({
@@ -18,7 +19,7 @@ function midleware(req, res, next) {
         message: "Unauthorized!",
       });
     }
-    req.worker = decoded.obgToSign;
+    req.worker = decoded;
     next();
   });
 }

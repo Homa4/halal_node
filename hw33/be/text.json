@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Maria Ivanenko",
+    "age": 29,
+    "position": "UI/UX Designer",
+    "salary": 30000,
+    "email": "maria.ivanenko@example.com",
+    "password": "DesignM#29",
+    "role": "worker"
+  },
+  {
+    "name": "Andriy Kuznetsov",
+    "age": 34,
+    "position": "Frontend Developer",
+    "salary": 35000,
+    "email": "andriy.kuznetsov@example.com",
+    "password": "FrontEndA#34",
+    "role": "worker"
+  },
+  {
+    "name": "Olena Petrova",
+    "age": 27,
+    "position": "Backend Developer",
+    "salary": 38000,
+    "email": "olena.petrova@example.com",
+    "password": "BackOlena!27",
+    "role": "worker"
+  },
+  {
+    "name": "Dmytro Bondar",
+    "age": 31,
+    "position": "DevOps Engineer",
+    "salary": 40000,
+    "email": "dmytro.bondar@example.com",
+    "password": "DevOpsD#31",
+    "role": "worker"
+  },
+  {
+    "name": "Kateryna Moroz",
+    "age": 25,
+    "position": "Quality Assurance Engineer",
+    "salary": 28000,
+    "email": "kateryna.moroz@example.com",
+    "password": "QAkaty25$",
+    "role": "worker"
+  },
+  {
+    "name": "Serhiy Lebedev",
+    "age": 38,
+    "position": "Project Manager",
+    "salary": 45000,
+    "email": "serhiy.lebedev@example.com",
+    "password": "PMSerhiy#38",
+    "role": "worker"
+  },
+  {
+    "name": "Anastasiya Hryhorenko",
+    "age": 30,
+    "position": "Graphic Designer",
+    "salary": 29000,
+    "email": "anastasiya.hryhorenko@example.com",
+    "password": "GraphAnas30!",
+    "role": "worker"
+  },
+  {
+    "name": "Viktor Kovalchuk",
+    "age": 29,
+    "position": "Full Stack Developer",
+    "salary": 42000,
+    "email": "viktor.kovalchuk@example.com",
+    "password": "FullStackV#29",
+    "role": "worker"
+  }
+]

@@ -1,0 +1,30 @@
+/* File: app/components/WorkerInfo/WorkerInfo.css */
+.worker-info {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.worker-info h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.worker-details {
+    list-style: none;
+    padding: 0;
+}
+
+.worker-details li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.worker-details li strong {
+    width: 90px;
+    display: inline-block;
+}

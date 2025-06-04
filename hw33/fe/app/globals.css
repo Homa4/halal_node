@@ -1,11 +1,15 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 
-:root {
+* {
   margin: 0;
   padding: 0;
 }
 
+html,
 body {
-  background-color: antiquewhite;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  background-color: rgb(249, 246, 242) !important;
 }

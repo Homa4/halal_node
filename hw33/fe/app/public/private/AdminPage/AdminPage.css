@@ -1,0 +1,297 @@
+/* === Загальні стилі сторінки === */
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefcf9;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+}
+
+.message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.loading-text {
+    color: #6c757d;
+    font-style: italic;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Інформаційний блок самого адміна */
+.admin-info-box {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fff3e8;
+    border: 1px solid #df690c;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
+.admin-info-box h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #df690c;
+}
+
+.admin-info-box p {
+    margin: 4px 0 0;
+    color: #555;
+}
+
+/* Заголовок секції адмін-панелі */
+.admin-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    /* залишили лише зовнішні відступи */
+    color: #df690c;
+    text-align: center;
+}
+
+/* === Секція “Add New Worker” === */
+.add-user-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.add-user-form h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #df690c;
+}
+
+.add-user-form input,
+.add-user-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.add-user-form button {
+    background-color: #df690c;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.add-user-form button:hover {
+    background-color: #bf5800;
+}
+
+/* === Секція “Delete Worker” === */
+.delete-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.delete-form h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: #df690c;
+}
+
+/* Обгортка для input + кнопки */
+.delete-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.delete-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #df690c;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.delete-input:focus {
+    border-color: #bf5800;
+}
+
+/* Стилі для кнопки Delete у цій секції */
+.delete-button {
+    padding: 12px 20px;
+    background-color: #df690c;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-button:hover:not(:disabled) {
+    background-color: #bf5800;
+}
+
+.delete-button:disabled {
+    background-color: #f4a366;
+    cursor: not-allowed;
+}
+
+/* Блок для відображення знайденого працівника */
+.found-worker-card {
+    background-color: #fff8f2;
+    border: 1px solid #df690c;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.found-worker-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #df690c;
+    text-align: center;
+}
+
+.found-worker-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.found-worker-card li {
+    margin: 6px 0;
+}
+
+.found-worker-card strong {
+    display: inline-block;
+    width: 90px;
+    color: #555;
+}
+
+/* Повідомлення про помилку, якщо не знайдено */
+.error-text {
+    color: #df690c;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* === Секція “All Workers” === */
+.user-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.user-list h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #df690c;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list li {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.delete-button-small {
+    background-color: #df690c;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-button-small:hover {
+    background-color: #bf5800;
+}
+
+/* === Адаптивність === */
+@media (max-width: 600px) {
+    .delete-form {
+        padding: 20px 20px;
+    }
+
+    .delete-input-wrapper {
+        flex-direction: column;
+    }
+
+    .delete-input {
+        width: 100%;
+    }
+
+    .delete-button,
+    .delete-button-small {
+        width: 100%;
+    }
+
+    .admin-info-box {
+        padding: 8px 15px;
+    }
+
+    .admin-title {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+}

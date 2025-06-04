@@ -1,0 +1,37 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px 40px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 1px solid #222;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text {
+    margin: 0;
+    color: #fff;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.separator {
+    color: #888;
+}

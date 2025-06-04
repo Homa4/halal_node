@@ -1,0 +1,57 @@
+/* AboutUs.css */
+
+.aboutus-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    /* matches px-4 */
+    background-image: url('/your-image.jpg');
+    /* replace with your actual image path */
+}
+
+.overlay-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* semi-transparent white */
+    padding: 2rem;
+    /* matches p-8 */
+    border-radius: 0.5rem;
+    /* matches rounded-lg */
+    max-width: 48rem;
+    /* matches max-w-3xl */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* matches space-y-6 */
+    text-align: center;
+}
+
+.text-block {
+    font-size: 1.125rem;
+    /* matches text-lg */
+    line-height: 1.75rem;
+    /* matches leading-relaxed */
+    color: #4a5568;
+    /* matches text-gray-700 */
+}
+
+.highlight {
+    color: #ed8936;
+    /* matches text-orange-500 */
+    font-weight: 600;
+    /* matches font-semibold */
+}
+
+/* Utility to ensure the section is full-screen on smaller viewports */
+@media (max-width: 640px) {
+    .aboutus-section {
+        height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}

@@ -1,0 +1,27 @@
+
+services:
+  fe:
+    build:
+      context: ./fe
+      dockerfile: Dockerfile
+    container_name: fe
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  be:
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    container_name: be
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

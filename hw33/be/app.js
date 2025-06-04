@@ -12,7 +12,6 @@ const corsObj = {
   credentials: true,
 };
 
-// PORT = process.env.PORT;
 const app = express();
 connectToDb();
 

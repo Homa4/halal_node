@@ -13,7 +13,6 @@ services:
     networks:
       - app-network
    
-
   back:
     build: ./app/back
     container_name: back-container
